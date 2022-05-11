@@ -117,7 +117,11 @@ if (ladoA==ladoC){
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+let NovoArray = retornaArrayOrdenado(array)
+let SegundoMaior = NovoArray[NovoArray.length-2]
+let SegundoMenor = NovoArray[1]
+return [SegundoMaior,SegundoMenor]
+
 }
 
 // EXERCÍCIO 11
