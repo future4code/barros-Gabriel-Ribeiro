@@ -46,7 +46,13 @@ return elevados
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-
+    let compare = 1
+    for (let input of array) {
+        if (input>compare){
+            compare = input
+        }
+    }
+    return compare
 }
 
 // EXERCÍCIO 07
