@@ -97,8 +97,23 @@ return pares
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
+if (ladoA==ladoC){
+    if (ladoB==ladoA) {
+        return "Equilátero"
+    } else {
+        return "Isósceles"
+    }
+    } else {
+    if (ladoC==ladoB) {
+        return "Isósceles"
+    } else if (ladoB==ladoA) {
+        return "Isósceles"
+    } else {
+        return "Escaleno"
+    }
+    }
 }
+
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
