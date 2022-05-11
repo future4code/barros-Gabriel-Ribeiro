@@ -23,7 +23,13 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-
+    let pares = []
+    for (let teste of array) {
+      if (teste % 2 == 0){
+          pares.push(teste)
+      }
+  }
+return pares
 }
 
 // EXERCÍCIO 05
