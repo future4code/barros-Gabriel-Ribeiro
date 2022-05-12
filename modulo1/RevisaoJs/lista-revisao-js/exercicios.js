@@ -140,12 +140,23 @@ return anonimo
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+let autorizados = []
+    for (let permissao of pessoas) {
+        if ((permissao.idade>14 && permissao.idade<60) && permissao.altura >= 1.5) {
+            autorizados.push(permissao)
+        }
+    }
+    return autorizados
 }
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  
+ let desautorizados = []
+    for (let individuo of pessoas) {
+        if ((individuo.idade<=14 || individuo.idade>60) || individuo.altura < 1.5)
+            desautorizados.push(individuo)
+    }
+    return desautorizados
 }
 
 // EXERCÍCIO 14
