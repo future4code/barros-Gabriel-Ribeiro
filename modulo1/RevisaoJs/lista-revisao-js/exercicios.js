@@ -187,11 +187,31 @@ return contas
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+  consultas.sort(function(a, b){
+      const nomeA = a.nome
+      const nomeB = b.nome
+    if (nomeA<nomeB){
+        return -1;
+    } else if (nomeA>nomeB){
+        return 1
+    } else {
+        return 0
+    }
+  })
+  return consultas
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+for (let i = 0; i < 3; i++){
+    consultas.sort(function(a,b){
+        if (a.dataDaConsulta.split('/')[i] > b.dataDaConsulta.split('/')[i]){
+            return 1
+        } else if (a.dataDaConsulta.split('/')[i] < b.dataDaConsulta.split('/')[i]){
+            return -1
+        }
+    })
+}
+return consultas
 }
 
