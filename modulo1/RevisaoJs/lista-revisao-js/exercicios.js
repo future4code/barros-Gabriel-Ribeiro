@@ -162,6 +162,27 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
 
+let i = 0;
+
+while (i<contas.length){
+
+    let debito = [];
+    function somar(user) {
+        return user.reduce((sum, nr) => sum + nr, 0);
+      }
+
+    function debitoTotal (usuario) {
+        usuario[i].compras.forEach(nr => debito.push(nr * -1));
+        console.log(debito);
+    }
+
+    debitoTotal(contas);
+
+    contas[i].compras = []
+    contas[i].saldoTotal += somar(debito)
+i++
+}
+return contas
 }
 
 // EXERCÍCIO 15A
