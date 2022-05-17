@@ -84,18 +84,30 @@ function checaStringsMesmoTamanho(string1, string2) {
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
   // implemente sua lógica aqui
-  array.get(1)
+
+  return (array[0])
 }
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
   // implemente sua lógica aqui
 
+let ultimo = array.length
+lastNumber = ultimo-1
+return (array[lastNumber])
 }
+retornaUltimoElemento
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
   // implemente sua lógica aqui
+
+let primeiro = array[0]
+let ultimo = array.length
+let realUltimo = array[ultimo-1]
+array.splice(0,1, realUltimo)
+array.splice(array.length-1,1,primeiro)
+return (array)
 
 }
 
@@ -103,11 +115,25 @@ function trocaPrimeiroEUltimo(array) {
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
 
+let input1 = string1.toUpperCase()
+let input2 = string2.toUpperCase()
+return (input1 === input2)
+
 }
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
+
+let anoAtual = prompt.toNumber("Em qual ano estamos?")
+let nascimento = prompt.toNumber("Insira o seu ano de nascença:")
+let identidade = prompt.toNumber("Quando foi emitido seu documento de indentidade?")
+let idade = anoAtual-nascimento
+let novo = 20 >= idade
+let meio = 50 >= idade >20
+let velho = idade >= 50
+let negativo = idade%5
+
 
 }
 
