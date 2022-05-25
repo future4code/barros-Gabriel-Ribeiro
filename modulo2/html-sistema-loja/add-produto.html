@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adicionar Produto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <p>Lojinha Alê à Tória</p>
+        <h1>Lojinha Alê à Tória</h1>
     </header>
     
     <nav>
+        <br>
         <a href="index.html">Página Inicial</a>
         <a href="ctrl-estoque.html">Controle de Estoque</a>
         <a href="add-produto.html">Adicionar Produto</a>
@@ -19,34 +21,48 @@
     </nav>
 
     
-    <h2>Adicionar Produto</h2>
+    <h2 id="centro">Adicionar Produto</h2>
     <form action="#">
-            <label for="link-foto">Link para foto: </label>
-            <input type="url" id="link-foto" name="link-foto">
+        <div id="div">   
+        <label for="link-foto">Link para foto: </label>
+            <input type="url" name="link-foto">
+        </div> 
             <br>
             <br>
-
+        
+        <div id="div">
             <label for="descricao">Descrição do produto: </label>
             <!-- Adicione o id apropriado para o input abaixo -->
-            <input type="text" id="descricao" name="descrição">
+            <input type="text" name="descrição">
+        </div>    
             <br>
             <br>
-            
+        <div id ="div">    
             <label for="preco">Preço (em R$): </label>
             <!-- Adicione o id apropriado e o type para receber números abaixo -->
-            <input type="number" id="preco" name="preço">
+            <input type="number" name="preço">
+        </div>
             <br>
             <br>
 
             <!-- Preencha as propriedades necessárias para os elementos abaixo -->
+        <div id="div">
             <label for="quantidade"> Quantidade disponível: </label>
-            <input type="number" id="quantidade" name="quantidade">
+            <input type="number" name="quantidade">
+        </div>
             <br>
             <br>
             <!-- Adicione ao type do botão abaixo o valor para que ele submeta o formulário -->
             <button type="submit">Adicionar</button>
-
+            
     </form>
-
+    <footer>
+        <br>
+            <p>Siga-nos nas redes sociais!</p>
+            <img src="img/facebook.png" id="icon"/>
+            <img src="img/instagram.png" id="icon"/>
+            <img src="img/linkedin.png" id="icon"/>
+        
+        </footer>
 </body>
 </html>
