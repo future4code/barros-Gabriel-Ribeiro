@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <p>Lojinha Alê à Tória</p>
+        <h1>Lojinha Alê à Tória</h1>
     </header>
     
     <nav>
+        <br>
         <a href="index.html">Página Inicial</a>
         <a href="ctrl-estoque.html">Controle de Estoque</a>
         <a href="add-produto.html">Adicionar Produto</a>
         <a href="funcionarios.html">Funcionários</a>
     </nav>
-
+<div id="centro">
     <h2>Controle de Estoque</h2>
 
     <table>
@@ -30,40 +32,48 @@
 
         <tr>
             <td><img src="img/pão-com-ovo.png" alt="Imagem de um pão com ovo"/></td>
-            <td> Pão com Ovo </td>
-            <td> R$ 3,50 </td>
+            <td id="nome"> Pão com Ovo </td>
+            <td id="preco"> R$ 3,50 </td>
             <td> 5 disponíveis </td>
         </tr>
 
         <tr>
             <td><img src="img/escova.jpg" alt="Imagem de uma escova velha"/></td>
-            <td> Escova de dente velha </td>
-            <td> R$ 0,50 </td>
+            <td id="nome"> Escova de dente velha </td>
+            <td id="preco"> R$ 0,50 </td>
             <td> 0 disponíveis </td>
         </tr>
 
         <tr>
             <td><img src="img/copo.jpg" alt="Imagem de um copo quebrado"/></td>
-            <td> Copo desconstruído </td>
-            <td> R$ 299,90 </td>
+            <td id="nome"> Copo desconstruído </td>
+            <td id="preco"> R$ 299,90 </td>
             <td> 30 disponíveis </td>
         </tr>
 
         <tr>
             <td><img src="img/jogo-de-bicho.jpg" alt="Imagem de um bilhete"/></td>
-            <td> Bilhete do Bicho </td>
-            <td> R$ 5,00 </td>
+            <td id="nome"> Bilhete do Bicho </td>
+            <td id="preco"> R$ 5,00 </td>
             <td> 2,7 disponíveis </td>
         </tr>
         
         <tr>
             <td><img src="img/tilapia.jpg" alt="Imagem de um peixe"></td>
-            <td> Peixe </td>
-            <td> R$ 32,60 </td>
+            <td id="nome"> Peixe </td>
+            <td id="preco"> R$ 32,60 </td>
             <td> -2 disponíveis </td>
         </tr>
 
     </table>
-
+</div>
+<footer>
+    <br>
+        <p>Siga-nos nas redes sociais!</p>
+        <img src="img/facebook.png" id="icon"/>
+        <img src="img/instagram.png" id="icon"/>
+        <img src="img/linkedin.png" id="icon"/>
+    
+    </footer>
 </body>
 </html>
