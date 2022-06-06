@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: orange;
+    padding: 1em 0px;
+    margin-bottom: 3%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    row-gap: 10%;
+    column-gap: 3%;
+    margin: 0px 3%;
+}
+
+.video {
+    outline: green auto 2px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    
+
+}
+
+footer {
+    color: azure;
+    background-color: darkslategray;
+    padding: 4px 40%;
+    margin-top: 10%;
+}
+
+h3 {
+    margin: 1% 0px;
+}
