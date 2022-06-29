@@ -4,23 +4,25 @@ import './style.css'
 import {IconeComContador} from '../IconeComContador/IconeComContador'
 import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
+import iconeMarcar from '../../img/bookmark_border_black_24dp.svg'
+import iconeMarcarCheio from '../../img/bookmark_black_24dp.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
 
 
 
 function Post(props){
-  const [state, setState] = useState({
-    curtido: false,
-    numeroCurtidas: 0,
-    comentando: false,
-    numeroComentarios: 0
-  })
 
   const [numeroCurtidas, setnumeroCurtidas] = useState (0)
   const [curtido, setCurtido] = useState(false)
   const [comentando, setComentando] = useState(false)
+  const [marcar, setMarcar] = useState(false)
   const [numeroComentarios, setNumeroComentarios] = useState(0)
+  const [respostaUsuario, setRespostaUsuario] = useState("")
+
+  const handleRespostaUsuario = (event) => {
+    setRespostaUsuario(event.target.value)  
+  }
 
   const onClickCurtida = () => {
     console.log('Curtiu!')
@@ -35,15 +37,26 @@ function Post(props){
   const onClickComentario = () => {
     setComentando(!comentando)
     if(comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
+      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} resposta={respostaUsuario} onChangeComentario={handleRespostaUsuario}/>
     }
-    console.log(comentando)
+  }
+
+  const onClickMarcar = () => {
+    setMarcar(!marcar)
   }
   
   const aoEnviarComentario = () => {
     setComentando(false)
     setNumeroComentarios(numeroComentarios + 1)
+    console.log(respostaUsuario)
   }
+
+  let iconeMarca
+    if(marcar) {
+      iconeMarca = iconeMarcarCheio
+    } else {
+      iconeMarca = iconeMarcar
+    }
 
   let iconeCurtida
 
@@ -56,7 +69,7 @@ function Post(props){
     let componenteComentario
 
     if(comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario}/>
+      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} onChangeComentario={handleRespostaUsuario}/>
     }
 
   return(
@@ -74,6 +87,10 @@ function Post(props){
           onClickIcone={onClickCurtida}
           valorContador={numeroCurtidas}
         />
+        <IconeComContador
+          icone={iconeMarca}
+          onClickIcone={onClickMarcar}
+        />
 
         <IconeComContador
           icone={iconeComentario}
@@ -84,7 +101,7 @@ function Post(props){
       {componenteComentario}
     </div>
   )
-}
+  }
 
 
 export default Post
