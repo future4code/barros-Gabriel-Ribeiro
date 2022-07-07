@@ -29,7 +29,7 @@ export const PostFooter=styled.div`
     justify-content: space-between;
 `
 
-export const UserPhoto=styled.div`
+export const UserPhoto=styled.img`
     background-image: url(${(props)=>props.fotoUsuario});
     height: 30px;
     width: 30px;
@@ -37,7 +37,7 @@ export const UserPhoto=styled.div`
     border-radius: 50%;
 `
 
-export const PostPhoto=styled.div`
+export const PostPhoto=styled.img`
     background-image: url(${(props)=>props.fotoPost});
     width: 100%;
 `
