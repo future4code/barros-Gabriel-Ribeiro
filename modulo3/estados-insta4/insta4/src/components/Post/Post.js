@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './style.css'
+import { PostContainer,PostHeader,PostFooter,PostPhoto } from '../../style'
 
 import {IconeComContador} from '../IconeComContador/IconeComContador'
 import iconeCoracaoBranco from '../../img/favorite-white.svg'
@@ -37,7 +37,8 @@ function Post(props){
   const onClickComentario = () => {
     setComentando(!comentando)
     if(comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} resposta={respostaUsuario} onChangeComentario={handleRespostaUsuario}/>
+      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} 
+      resposta={respostaUsuario} onChangeComentario={handleRespostaUsuario}/>
     }
   }
 
@@ -73,15 +74,16 @@ function Post(props){
     }
 
   return(
-    <div className = 'PostContainer'>
-      <div className = 'PostHeader'>
-        <img className = 'UserPhoto' src={props.fotoUsuario} alt={'Imagem do usuario'}/>
+    <PostContainer>
+      <PostHeader>
+        <img src={props.fotoUsuario} alt=""/>
         <p>{props.nomeUsuario}</p>
-      </div>
+      </PostHeader>
 
-      <img className = 'PostPhoto'src={props.fotoPost} alt={'Imagem do post'}/>
+      
+      <PostPhoto> <img src={props.fotoPost} alt=""/> </PostPhoto>
 
-      <div className = 'PostFooter'>
+      <PostFooter>
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={onClickCurtida}
@@ -97,9 +99,9 @@ function Post(props){
           onClickIcone={onClickComentario}
           valorContador={numeroComentarios}
         />
-      </div>
+      </PostFooter>
       {componenteComentario}
-    </div>
+    </PostContainer>
   )
   }
 
