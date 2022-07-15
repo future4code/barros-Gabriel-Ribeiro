@@ -6,6 +6,7 @@ function Etapa3() {
         <input></input>
         <h2>6. Você fez algum curso complementar?</h2>
         <input></input>
+        <button>Finalizar</button>
       </div>
     );
   }

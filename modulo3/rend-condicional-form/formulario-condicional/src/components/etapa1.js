@@ -10,6 +10,7 @@ function Etapa1() {
         <input></input>
         <h2>4. Qual a sua escolaridade?</h2>
         <input></input>
+        <button>Próxima etapa</button>
       </div>
     );
   }

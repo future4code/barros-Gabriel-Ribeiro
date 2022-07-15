@@ -6,6 +6,7 @@ function Etapa2() {
         <input></input>
         <h2>6. Qual unidade de ensino?</h2>
         <input></input>
+        <button>Finalizar</button>
       </div>
     );
   }
