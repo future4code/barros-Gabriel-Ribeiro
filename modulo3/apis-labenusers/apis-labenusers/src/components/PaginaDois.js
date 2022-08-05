@@ -29,7 +29,7 @@ export function PaginaDois() {
     axios
       .get(url, myHeaders)
       .then((response) => {
-        setMeusUsers(response.data.result.list);
+        setMeusUsers(response.data);
       })
       .catch((erro) => {
         console.log(erro.response);
@@ -52,7 +52,7 @@ return (
           placeholder="Nome exato para busca"
           onChange={atualizaPesquisa}
         />
-        <button onClick={getUserlist}>Criar Usuário</button>
+        <button onClick={getUserlist}>Pesquisar</button>
     </div>
 )
 
