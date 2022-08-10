@@ -62,8 +62,8 @@ const escolha = (id, choice) => {
            age={perfil.age}
            bio={perfil.bio}
          />
-           <button onClick={()=>{escolha(perfil.id,true)}}> Deslike </button>
-           <button onClick={()=>{escolha(perfil.id,false)}}> Coração</button>
+           <button onClick={()=>{escolha(perfil.id,false)}}> Deslike </button>
+           <button onClick={()=>{escolha(perfil.id,true)}}> Coração</button>
     </div>
   );
 }

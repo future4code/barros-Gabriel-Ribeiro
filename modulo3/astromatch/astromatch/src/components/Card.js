@@ -1,5 +1,4 @@
 
-
 function Card (props) {
 
     const {photo, name, age, bio} = props

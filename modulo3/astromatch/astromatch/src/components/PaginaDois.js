@@ -15,6 +15,9 @@ export function PaginaDois() {
     const url2 =
     "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel-ribeiro-barros/matches";
 
+    const urlClear =
+    "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/gabriel-ribeiro-barros/clear"
+
 
     // Puxando o Pefil
     const getMatches = () => {
@@ -29,9 +32,23 @@ export function PaginaDois() {
             });
     };
 
+        // Clear
+        const clearMatches = () => {
+            axios
+                .put(urlClear)
+                .then((response) => {
+                    console.log (response);
+                    getMatches()
+                })
+                .catch((erro) => {
+                    console.log(erro.response)
+                });
+        };
+
 return (
     <div>
         <h1>Pagina 2</h1>
+        <button onClick={clearMatches}>Limpar Matches</button>
         <ul> {matches.map((match) => {
       return (
         <CardMini key={match.id}
