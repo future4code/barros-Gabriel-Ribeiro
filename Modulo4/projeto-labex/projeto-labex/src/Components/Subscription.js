@@ -1,15 +1,11 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import { BASE_URL } from '../constants/constants';
+import { useState } from "react";
 
-function Subscription() {
-    
-    const [dataTrip,isLoadingTrip,erroTrip]=userApply(`${BASE_URL}trips/${element.id}`)
 
-    const listTripsNames = dataTrip&&dataTrip.trips&&dataTrip.trips.map((element)=>{
-        return <option key={element.id}>{element.name}</option>;
-    })
+function Subscription(element) {
     
+
     const navigate = useNavigate();
 
     const Login = () => {
@@ -26,8 +22,10 @@ function Subscription() {
             <h1>Inscreva-se na Viagem</h1>
             <li>
             <button onClick={ Login }>Fazer Login</button>
+            <form>
             <input type="string" placeholder="Nome" value={""}></input>
-            <button onClick={ ${} }>Enviar</button>
+
+            </form>
             </li>
         </section>
     );

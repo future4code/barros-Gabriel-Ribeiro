@@ -9,18 +9,18 @@ function TripList() {
     const [dataTrip,isLoadingTrip,erroTrip]=useRequestData(`${BASE_URL}trips`)
     
     const listTrip = dataTrip&&dataTrip.trips&&dataTrip.trips.map((dataTrip)=>{
-        return<li>{Card(dataTrip.name, dataTrip.description, dataTrip.duration, dataTrip.date)}</li>
+        return<li>{Card(dataTrip.id, dataTrip.name, dataTrip.description, dataTrip.duration, dataTrip.date)}</li>
     })
 
     const navigate = useNavigate();
 
     const goToLogin = () => {
         navigate("/login")
-    }
+    };
 
     const subscribe = () => {
         navigate("/viagens/inscricao")
-    }
+    };
 
     return (
         <section>
