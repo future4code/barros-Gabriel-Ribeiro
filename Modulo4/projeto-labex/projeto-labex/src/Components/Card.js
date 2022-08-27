@@ -1,23 +1,20 @@
-import { BASE_URL } from '../constants/constants';
-import { useNavigate } from 'react-router-dom';
+import styled from "styled-components";
 
-function Card(id,name,description,planet,duration,date) {
-  
-  const navigate = useNavigate();
+const CardStyle = styled.section`
+background-color: white;
 
-  const subscribe = () => {
-      navigate("/viagens/inscricao")
-  }  
+`
+
+function Card ({id,name,description,planet,duration,date}) {
   
   return (
-      <div>
-        <h4>{name}</h4>
-        <p>{description}</p>
-        <p>Planeta:{planet}</p>
-        <p>Duração:{duration}</p>
-        <p>Data:{date}</p>
-        <button onClick={ subscribe }>Enviar</button>
-      </div>
+   <CardStyle>
+    <h4>{name}</h4>
+    <p>{description}</p>
+    <p>Planeta:{planet}</p>
+    <p>Duração:{duration}</p>
+    <p>Data:{date}</p>
+  </CardStyle>
     );
   }
   

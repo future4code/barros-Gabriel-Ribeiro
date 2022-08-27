@@ -1,7 +1,13 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
+import { useProtectPage } from "../hooks/useProtectPage";
+import useRequestData from "../hooks/useRequestData";
+import { BASE_URL } from "../constants/constants";
 
 function AdminHome() {
+    
+    useProtectPage();
+
     const navigate = useNavigate();
 
     const tripDetails = () => {
@@ -15,6 +21,16 @@ function AdminHome() {
     const returnLastPage = () => {
         navigate(-1)
     }
+
+    //-------Page
+
+    const data=useRequestData(`${BASE_URL}juniorp/trip/reTQKzHx3izgvBMzsFTi`,
+    {headers:{
+        auth:localStorage.getItem("token")
+
+    }}
+    );
+    console.log(data);
 
     return (
         <section>
