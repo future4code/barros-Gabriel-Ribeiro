@@ -1,0 +1,16 @@
+GET https://viacep.com.br/ws/24210000/json/
+Content-Type: application/json
+
+###
+
+POST http://localhost:3003/teste
+content-type: application/json
+
+{
+    "name": "Miguel",
+    "nickname": "Migcentro",
+    "email": "miguel@email.com",
+    "CEP": "24210000"
+}
+
+### 
