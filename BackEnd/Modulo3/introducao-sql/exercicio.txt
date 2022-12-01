@@ -1,0 +1,116 @@
+-------------------==================Exercicio 01==================-------------------
+
+ A) Temos primeiramente o comando de criar uma tabela de nome Actor (Create Table), Variaveis de caracteres limitadas como key primaria e nome,
+um modelo de data para o dia do nascimento e mais uma caracter limitado para o genero. Quase todas precisam ser nao nulas.
+
+ B) Esses comando sao uisados para mostrar o banco de dados e tabelas especificas.
+
+ C) O resultado do comando executado disponibiliza uma tabela contendo todos os dados e os tipos que foram atribuidos a eles.
+
+-------------------==================Exercicio 02==================-------------------
+
+ A) INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "002", 
+  "Gloria Pires",
+  1200000,
+  "1963-08-23", 
+  "female"
+);
+
+ B) Ele fala que a inseção é inválida por conta do conflito entre duas ID existentes, uma entrada duplicada.
+
+ C) Os parametros passados como argumentos estão em um número menor dos que o os inseridos na entrada.
+
+ D) Não existe uma entrada válida para o campo "Nome" no input inserido.
+
+ E) Data não é string.
+
+-------------------==================Exercicio 03==================-------------------
+
+ A) SELECT * from Actor WHERE gender = "female";
+
+ B) SELECT salary from Actor WHERE name = "Tony Ramos";
+
+ C) SELECT * from Actor WHERE gender = "invalid"; / Não retornou nada pq ngm é inválido.
+
+ D) SELECT id, name, salary from Actor WHERE salary < 500001;
+
+ E) Nome não existe, o que existe é Name.
+
+-------------------==================Exercicio 04==================-------------------
+
+ A) A query descrita acima é uma sequência de comandos para obter um resultado que inclua atores que comecem com nome A ou J e recebem mais de 300.000.
+
+ B) SELECT * FROM Actor
+WHERE name NOT LIKE "A%" AND salary > 350000
+
+ C) SELECT * FROM Actor
+WHERE name LIKE "%g%" OR name LIKE "%G%";
+
+ D) SELECT * FROM Actor
+WHERE 
+	(name LIKE "%g%" OR name LIKE "%G%" OR name LIKE "%a%" OR name LIKE "%A%")
+  AND salary BETWEEN 350000 AND 900000;
+
+-------------------==================Exercicio 05==================-------------------
+
+ A/B) INSERT INTO Filmes (id, name, sinopse, release_date, avaliacao)
+VALUES(
+  "001", 
+  "Se eu fosse você",
+  "Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento. Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos",
+  "06/01/2006", 
+  "7"
+);
+
+ C) INSERT INTO Filmes (id, name, sinopse, release_date, avaliacao)
+VALUES(
+  "002", 
+  "Doce de mãe",
+  "Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões. A vida dela e dos seus quatro filhos sofre uma reviravolta depois que Zaida, empregada e amiga de Dona Picucha, anuncia que vai se casar e não poderá mais morar com ela",
+  "27/12/2012", 
+  "10"
+);
+
+ D) INSERT INTO Filmes (id, name, sinopse, release_date, avaliacao)
+VALUES(
+  "003", 
+  "Dona Flor e Seus Dois Maridos",
+  "Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates. A vida de abusos acaba por acarretar sua morte precoce.",
+  "02/11/2017", 
+  "8"
+);
+
+ E) INSERT INTO Filmes (id, name, sinopse, release_date, avaliacao)
+VALUES(
+  "004", 
+  "O homem que copiava",
+  "Em O Homem que Copiava, André (Lázaro Ramos) é um jovem de 20 anos que trabalha na fotocopiadora da papelaria Gomide, localizada em Porto Alegre.",
+  "13/06/2003", 
+  "7"
+);
+
+-------------------==================Exercicio 06==================-------------------
+
+ A) SELECT id, name, avaliacao FROM Filmes
+WHERE id = "001";
+
+ B) SELECT * FROM Filmes
+WHERE name = "%você%";
+
+ C) SELECT id, name, sinopse FROM Filmes
+WHERE avaliacao > 7;
+
+-------------------==================Exercicio 07==================-------------------
+
+ A) SELECT * FROM Filmes
+WHERE name LIKE "%vida%";
+
+ B) SELECT * FROM Filmes
+WHERE name LIKE "%vida%" OR sinopse LIKE "%vida%";
+
+ C) SELECT * FROM Filmes;
+
+ D) SELECT * FROM Filmes
+WHERE (name LIKE "%vida%" OR sinopse LIKE "%vida%") AND avaliacao > 7;
