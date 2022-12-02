@@ -1,0 +1,69 @@
+### Exercício 1
+
+ A) Uma chave estrageira é um valor que é importado de outra tabela, como chave,
+costuma ser uma variavel que identifica a linha da tabela.
+
+ B) ```
+    INSERT INTO Rating (id, comment, rate, movie_id)
+      VALUES(
+        "001", 
+        "Mais ou menos..",
+        5,
+        "004"
+    );
+    ```
+
+ C) "Error Code: 1452. Cannot add or update a child row: a foreign key constraint 
+fails (`jbl-4416227-gabriel-ribeiro`.`Rating`, CONSTRAINT `Rating_ibfk_1` FOREIGN 
+KEY (`movie_id`) REFERENCES `Movies` (`id`))"
+
+   Houve um erro na chave estreangeira por conta da falta de existência de uma igual correspondente na tabela movies.
+
+ D) ```
+    ALTER TABLE Movies DROP COLUMN avaliacao;
+    ```
+    Feito.
+
+ E) ```
+	DELETE FROM Movies WHERE rating <> 0;
+    ```
+    "Error Code: 1054. Unknown column 'rating' in 'where clause'"
+
+    Não há como apagar pois não existe essa coluna mais na tabela Movies.
+
+### Exercício 2 
+
+ A) Essa é uma tabela que pega atores e filmes de outras tabelas para os unir em 
+um objeto único que represente o elenco da obra.
+
+ B) Ok.
+
+ C) "Error Code: 1452. Cannot add or update a child row: a foreign key constraint fails 
+(`jbl-4416227-gabriel-ribeiro`.`MovieCast`, CONSTRAINT `MovieCast_ibfk_2` FOREIGN KEY 
+(`actor_id`) REFERENCES `Actor` (`id`))"
+
+ Ele dá como inserção inválida por não possuir um id correspondente.
+
+ D) "Error Code: 1175. You are using safe update mode and you tried to update 
+a table without a WHERE that uses a KEY column. Cannot use range access on 
+index 'PRIMARY' due to type or collation conversion on field 'id' 
+To disable safe mode, toggle the option in Preferences -> SQL Editor and 
+reconnect."
+
+E depois:
+
+"Error Code: 1451. Cannot delete or update a parent row: a foreign key constraint 
+fails (`jbl-4416227-gabriel-ribeiro`.`MovieCast`, CONSTRAINT `MovieCast_ibfk_2` 
+FOREIGN KEY (`actor_id`) REFERENCES `Actor` (`id`))"
+
+Não apagou pois está vinculado a uma outra tabela.
+
+### Exercício 3
+
+ A) O operador ON indica que o que será agrupado o Rating que tiver associado a 
+outro id de um filme, unindo as duas tabelas em apenas uma só.
+
+ B) ```
+	SELECT Movies.id, name, rate FROM Movies
+	INNER JOIN Rating ON Movies.id = Rating.movie_id;
+    ```
