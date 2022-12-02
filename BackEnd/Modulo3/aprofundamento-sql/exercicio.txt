@@ -1,0 +1,49 @@
+------------===========EXERCICIO 01===========------------
+
+ A) Altera a tabela de Atores para retirar a coluna de salario.
+
+ B) Altera a tabela de atores para mudar a coluna de genero para incluir sex antes e seis caracteres.
+
+ C) Altera a tabela de atores para inserir genero para incluir ate 255 caracteres.
+
+ D) ALTER TABLE Actor CHANGE gender gender VARCHAR(100);
+
+------------===========EXERCICIO 02===========------------
+
+ A) UPDATE Actor SET name = "Joaozinho" WHERE id = "003";
+
+ B) UPDATE Actor SET name = "JULIANA PAES" WHERE name = "Juliana Paes";
+
+    UPDATE Actor SET name = "Juliana Paes" WHERE name = "JULIANA PAES";
+
+ C) UPDATE Actor SET name = "Fernanda Torres", salary = 40000, birth_date = "1953-08-21", gender = "female" WHERE id = "005";
+
+ D) O resultado é inválido pois a plataforma não reconhece a coluna a ser modificada.
+
+------------===========EXERCICIO 03===========------------
+
+ A) DELETE FROM Actor WHERE name = "Fernanda Montenegro";
+
+ B) DELETE FROM Actor WHERE gender = "male" AND salary > 1000000;
+
+------------===========EXERCICIO 04===========------------
+
+ A) SELECT MAX(salary) FROM Actor;
+
+ B) SELECT MIN(salary) FROM Actor WHERE gender = "female";
+
+ C) SELECT COUNT(*) FROM Actor WHERE gender = "female";
+
+ D) SELECT SUM(salary) FROM Actor;
+
+------------===========EXERCICIO 05===========------------
+
+ A) O comando dado é de realizar uma contagem em relacao a coluna gender, vendo quantas entradas possuem em cada tipo.
+
+ B) SELECT id, name FROM Actor ORDER BY name DESC;
+
+ C) SELECT name FROM Actor ORDER BY salary ASC;
+
+ D) SELECT name FROM Actor ORDER BY salary DESC LIMIT 3;
+
+ E) SELECT AVG(salary),gender FROM Actor GROUP BY gender;
