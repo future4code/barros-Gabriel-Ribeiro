@@ -1,0 +1,23 @@
+GET https://viacep.com.br/ws/01247090/json/
+Content-Type: application/json
+
+###
+
+POST http://localhost:3003/test
+content-type: application/json
+
+{
+    "cep": "01257090"
+}
+
+###
+
+POST http://localhost:3003/users/create
+Content-Type: application/json
+
+{
+  "name": "Devante Wolf",
+  "nickname": "Mogli",
+  "email": "pumeveqocor@gotgel.org",
+  "zipcode": "01247040"
+}
