@@ -17,7 +17,7 @@ export default async function createUser
         connection ("labecommerce_users")
             .insert({id, name,email,password})
 
-        res.status(201).send("Conta cadastrada com sucesso!");
+        res.status(201).send(`Conta cadastrada com sucesso! ${id},${name},${email} e ${password}`);
 
     } catch (err: any) {
         res.status(errorCode).send(err.message);

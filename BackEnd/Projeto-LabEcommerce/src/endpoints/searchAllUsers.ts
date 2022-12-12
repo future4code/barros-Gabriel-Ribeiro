@@ -1,15 +1,13 @@
-import { Response } from "express";
-import { connection } from "../data/connections";
+import { Request, Response } from "express"
+import { connection } from "../data/connections"
+import { TABLE_USERS } from "../data/tableNames"
 
-export default async function searchAllUsers
-( req: Request, res: Response ): Promise<void> {
+export const getUsers = async (req: Request, res: Response) => {
+    let errorCode = 400
     try {
-    
-        const users = await connection ("labecommerce_users")
-
-        res.status(201).send(users);
-
-    } catch (err: any) {
-        res.status(500).send(err);
+        const result = await connection(TABLE_USERS).select()
+        res.status(200).send({ users: result })
+    } catch (error:any) {
+        res.status(errorCode).send({ message: error.message })
     }
 }

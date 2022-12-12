@@ -1,20 +1,21 @@
-GET http://localhost:3003/users
+
+GET http://localhost:3306/users
 Content-Type: application/json
 
 ###
 
-GET http://localhost:3003/products
+GET http://localhost:3306/products
 Content-Type: application/json
 
 ###
 
-POST http://localhost:3003/users
+POST http://localhost:3306/users
 content-type: application/json
 
 {
-    "name": "Miguel",
-    "email": "miguel@email.com",
-    "password": "24210"
+    "name": "João",
+    "email": "jojo@email.com",
+    "password": "12340"
 }
 
 ### 

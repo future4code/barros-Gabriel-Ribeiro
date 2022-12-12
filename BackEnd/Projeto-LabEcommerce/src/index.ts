@@ -2,15 +2,17 @@ import app from "./app"
 
 import createProduct from './endpoints/createProduct'
 import createUser from './endpoints/createUser'
-import searchAllProducts  from './endpoints/searchAllProducts'
-import searchAllUsers from './endpoints/searchAllUsers'
+import{ getProducts }  from './endpoints/searchAllProducts'
+import { getUsers } from './endpoints/searchAllUsers'
 
-app.post("/users", createUser);
-app.post("/products", createProduct);
+app.listen(3306, () => {
+    console.log("O servidor está Online.")
+})
 
-app.get("/products", searchAllProducts);
-app.get("/users", searchAllUsers);
+app.post("/users", createUser)
+app.post("/products", createProduct)
 
-app.listen(3003, () => {
-    console.log("O servidor está Online.");
-});
+app.get("/products", getProducts)
+app.get("/users", getUsers)
+
+
