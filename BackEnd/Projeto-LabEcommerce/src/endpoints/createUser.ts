@@ -15,7 +15,7 @@ export default async function createUser
         const id = Date.now()
         
         connection ("labecommerce_users")
-            .insert({id, name,email,password})
+            .insert({id:id, name:name,email:email,password:password})
 
         res.status(201).send(`Conta cadastrada com sucesso! ${id},${name},${email} e ${password}`);
 

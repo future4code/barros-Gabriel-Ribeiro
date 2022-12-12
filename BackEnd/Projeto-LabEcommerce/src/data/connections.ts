@@ -6,7 +6,7 @@ import knex from "knex";
 dotenv.config();
 
 export const connection = knex({
-    client: "postgres",
+    client: "mysql",
     connection: {
         host: process.env.DB_HOST,
         user: process.env.DB_USER,

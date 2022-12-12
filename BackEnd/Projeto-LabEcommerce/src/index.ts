@@ -5,7 +5,7 @@ import createUser from './endpoints/createUser'
 import{ getProducts }  from './endpoints/searchAllProducts'
 import { getUsers } from './endpoints/searchAllUsers'
 
-app.listen(3306, () => {
+app.listen(3003, () => {
     console.log("O servidor está Online.")
 })
 

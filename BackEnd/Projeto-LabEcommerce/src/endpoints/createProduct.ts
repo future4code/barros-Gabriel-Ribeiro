@@ -16,7 +16,7 @@ export default async function createProduct
         const id = Date.now()
         
         connection ("labecommerce_products")
-            .insert({id, name,price,image_url})
+            .insert({id:id, name:name,price:price,image_url:image_url})
 
         res.status(201).send("Produto cadastrado com sucesso.");
 
