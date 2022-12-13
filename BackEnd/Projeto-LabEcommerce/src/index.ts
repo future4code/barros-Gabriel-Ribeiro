@@ -9,10 +9,14 @@ app.listen(3003, () => {
     console.log("O servidor está Online.")
 })
 
+app.post("/users", orderRegister)
+
 app.post("/users", createUser)
 app.post("/products", createProduct)
 
 app.get("/products", getProducts)
 app.get("/users", getUsers)
+
+
 
 
