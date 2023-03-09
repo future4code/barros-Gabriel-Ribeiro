@@ -1,0 +1,49 @@
+POST http://localhost:3003/user/new-user
+Content-Type: application/json
+
+{
+    "name":"Juliana",
+    "email":"juliana@mail.com",
+    "password":"12345"
+}
+
+###
+
+GET http://localhost:3003/user/all-users
+
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email":"juliana@mail.com",
+    "password":"12345"
+}
+
+###
+
+GET http://localhost:3003/user/user-by-token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVmMjNkZWRkLWRlMzctNDI5ZS04MTRiLWVlNWI0MTc4ZGRlMyIsImlhdCI6MTY3Nzg5NTg2NiwiZXhwIjoxNjc3ODk5NDY2fQ.GScnIWPrPcTz0ElQhSa_pb4jrggKsgcpeCWIke8Ew5Q"
+}
+
+###
+
+POST http://localhost:3003/user/new-recipe
+Content-Type: application/json
+
+{
+    "name":"Ovo Frito",
+    "description":"Um simples ovo que foi frito.",
+    "preparation":"Quebre um ovo em uma frigideira quente com um pouco de óleo e deixe fritar, ao dorar, retire.",
+    "creationDate": "03/03/2023 23h"
+}
+
+###
+
+GET http://localhost:3003/user/all-recipes
+
+###
